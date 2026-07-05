@@ -484,16 +484,16 @@ Once the frontend is reachable:
 
 ## Project Highlights
 
-✔ Two-Tier Kubernetes Architecture
-✔ Docker Containerization
-✔ Kubernetes Deployments & Services
-✔ MetalLB LoadBalancer
-✔ NGINX Reverse Proxy
-✔ Internal Service Discovery
-✔ Docker Hub Integration
-✔ AWS EC2 Hosted Kind Cluster
-✔ Production-Style Kubernetes Networking
-✔ Troubleshooting Documentation 
+✔ Two-Tier Kubernetes Architecture<br>
+✔ Docker Containerization<br>
+✔ Kubernetes Deployments & Services<br>
+✔ MetalLB LoadBalancer<br>
+✔ NGINX Reverse Proxy<br>
+✔ Internal Service Discovery<br>
+✔ Docker Hub Integration<br>
+✔ AWS EC2 Hosted Kind Cluster<br>
+✔ Production-Style Kubernetes Networking<br>
+✔ Troubleshooting Documentation<br> 
 
 ---
 
