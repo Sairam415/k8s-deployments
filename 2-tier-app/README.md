@@ -27,17 +27,16 @@
   - [Step 6: Access the Application](#step-6-access-the-application)
 - [Validation Steps](#validation-steps)
 - [Troubleshooting](#troubleshooting)
-- [Lessons Learned](#lessons-learned)
+- [Implementation Highlights](#implementation-highlights)
 - [Future Enhancements](#future-enhancements)
 - [Project Highlights](#project-highlights)
 - [Author](#author)
-- [License](#license)
 
 ---
 
 ## Project Overview
 
-This project demonstrates how to deploy a multi‑tier application on Kubernetes while following modern DevOps and cloud‑native practices.
+This project implements a containerized two-tier application deployed on Kubernetes using AWS EC2, Kind, Docker, and MetalLB.
 
 The application consists of:
 * **Frontend** – static HTML, CSS, JavaScript served via Nginx
@@ -49,7 +48,7 @@ The application consists of:
 * **Internal Service Communication** – backend remains cluster‑internal only
 * **Cloud Deployment** – AWS EC2 instance running a kind cluster with MetalLB providing load‑balancing
 
-The primary goal is to showcase secure frontend‑to‑backend communication within a Kubernetes cluster while exposing only the frontend to end users.
+This implementation provides secure frontend-to-backend communication using Kubernetes Services and an NGINX Reverse Proxy while exposing only the frontend through a LoadBalancer Service.
 
 ---
 
@@ -81,6 +80,21 @@ Backend Pod (Node.js API)
 *The browser only ever talks to the frontend. The Nginx ConfigMap inside the frontend pod proxies `/api/*` paths to the backend service, keeping the backend private inside the cluster.*
 
 ---
+
+## Architecture Components
+
+| Component | Implementation |
+|-----------|----------------|
+| Frontend | NGINX serving static HTML, CSS, and JavaScript |
+| Backend | Node.js + Express REST API |
+| Container Runtime | Docker |
+| Container Registry | Docker Hub |
+| Orchestration Platform | Kubernetes (Kind) |
+| Load Balancer | MetalLB |
+| Cloud Platform | AWS EC2 |
+| Networking | Kubernetes Services (LoadBalancer & ClusterIP) |
+| Reverse Proxy | NGINX |
+| CLI Tools | kubectl, Docker CLI |
 
 ## Application Screenshots
 
